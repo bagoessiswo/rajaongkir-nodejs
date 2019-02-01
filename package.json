@@ -4,7 +4,7 @@
   "description": "NodeJS Client Library API RajaOngkir",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec --bail --check-leaks test",
+    "test": "mocha --timeout 10000 --reporter spec --bail --check-leaks test",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks",
     "test-local": "istanbul cover ./node_modules/mocha/bin/_mocha test/pro --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
@@ -32,12 +32,12 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "chai": "^4.1.1",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
-    "mocha": "^3.5.0",
+    "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nock": "^9.0.14",
-    "standard": "^10.0.3",
+    "standard": "^12.0.1",
     "vows": "^0.8.1"
   },
   "dependencies": {
